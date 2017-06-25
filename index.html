@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>IMAGE GALLERY</title>
+        
+        <script>
+            function preloadimages()
+            {
+                images=new
+                Array('img1.jpg','img2.jpg','img3.jpg','img4.jpg','img5.jpg');
+                preload(images);
+            }
+            function preload(imgages)
+            {
+                for(var i=0;i<imgages.length;i++)
+                {
+                    var im=new Image();
+                    im.src=img[i];
+                }
+    
+            }
+       
+      </script>
+      <style type="text/css">
+          .zoomin img { 
+              height: 200px;
+                        width: 200px
+                           -webkit-transition-all 2s ease;
+                       -moz-transition: all 2s ease; -ms-transition: all 2s ease;
+                       transition: all 2s ease; }
+          
+          .zoomin img:hover {
+              
+          
+          width: 300px; 
+          height: 300px; }
+          
+      </style>
+          
+    </head>
+    <body style="background-color: grey">
+        
+        <h1>IMAGE GALLERY</h1>
+        <p>CLICK THE IMAGES</P>
+          
+        
+        <div class="zoomin" style="background-color:oldlace" height="100%" width="100%" border="1px solid black">
+       
+      
+        
+        <a href="img1.jpg" title="1" target="_f1" onclick="preloadimages()">
+                  <img src="img1.jpg" alt="1"/></a>
+                
+          <a href="img2.jpg" title="2" target="_f1" onclick="preloadimages()">
+                  <img src="img2.jpg" alt="2" /></a>            
+           <a href="img3.jpg" title="3" onclick="preloadimages()">
+                  <img src="img3.jpg" alt="3"/></a>                  
+                 <a href="img4.jpg" title="4" onclick="preloadimages()">
+                  <img src="img4.jpg" alt="4" height="500px"; width="200px";></a>
+                  
+                  <a href="img5.jpg" title="5">
+                  <img src="img5.jpg" alt="5"  onclick="preloadimages()"/></a>
+                  
+          
+        </div>
+ 
+    </body>
+</html>
